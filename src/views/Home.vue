@@ -1,55 +1,16 @@
 <template>
-  <div class="home">
-    <b-container>
-      <b-row class="mt-3 mb-5">
-        <b-col cols="4">
-          <b-card title="Number Of Tweets">
-            <b-card-text>
-              <h1>4k</h1>
-            </b-card-text>
-          </b-card>
-        </b-col>
-        <b-col cols="4">
-          <b-card title="Positive Sentiments">
-            <b-card-text>
-              <h1>1k</h1>
-            </b-card-text>
-          </b-card>
-        </b-col>
-        <b-col cols="4">
-          <b-card title="Negative Sentiments">
-            <b-card-text>
-              <h1>3k</h1>
-            </b-card-text>
-          </b-card>
-        </b-col>
-      </b-row>
-      <div class="mb-5">
-        <line-chart/>
-      </div>
-      <b-row class="mt-5">
-        <b-col cols="5">
-          <pie-chart/>
-        </b-col>
-        <b-col cols="7">
-          <top-tweets/>
-        </b-col>
-      </b-row>
-      
-    </b-container>
+  <div class="home mt-5 ml-5 mr-5">
+    <b-jumbotron header="Tweet Sentiment Dashboard" lead="Sentiment Analysis Web Application With VueJS and Python Flask">
+      <p>This app help you to analyze sentiment of a hashtag</p>
+      <div class="mb-3"><b>Follow Me</b></div>
+      <a class="btn btn-info mr-2" href="https://medium.com/@deavenditama">Medium</a>
+      <a class="btn btn-primary" href="https://www.facebook.com/DeaVenditama/">Facebook</a>
+    </b-jumbotron>
   </div>
 </template>
 
 <script>
-import LineChart from '@/components/LineChart.vue' 
-import PieChart from '@/components/PieChart.vue' 
-import TopTweets from '@/components/TopTweets.vue' 
 export default {
   name: 'Home',
-  components: {
-    'line-chart':LineChart,
-    'pie-chart':PieChart,
-    'top-tweets':TopTweets,
-  }
 }
 </script>

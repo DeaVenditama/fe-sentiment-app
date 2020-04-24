@@ -16,7 +16,7 @@
 					<b-button v-on:click="editHashtag(data.item.id, data.item.hashtag)" class="mr-3 mb-3" variant="warning">
 						Edit
 					</b-button>
-					<b-button v-on:click="viewDashboard(data.item.id)" class="mr-3 mb-3" variant="success">
+					<b-button v-on:click="viewDashboard(data.item.hashtag)" class="mr-3 mb-3" variant="success">
 						View Dashboard
 					</b-button>
 					<b-button v-on:click="viewTweets(data.item.hashtag)" class="mr-3 mb-3" variant="info">
@@ -84,8 +84,8 @@
 			editHashtag: function (id, hashtag) {
 				this.$emit("actionButton", id, hashtag);
 			},
-			viewDashboard: function (id) {
-				console.log("view " + id);
+			viewDashboard: function (hashtag) {
+				this.$router.push({path:`/dashboard/${hashtag}`});
 			},
 			viewTweets: function(hashtag){
 				console.log(hashtag);
